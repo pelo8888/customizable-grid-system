@@ -1,0 +1,31 @@
+{
+  "name": "Customizable Grid System",
+  "description": "",
+  "author": "Alejandro Fontes <pelo8888@gmail.com>",
+  "url": "",
+  "dependencies": {
+    "grunt": "~0.4.5",
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "closure-linter-wrapper": "~0.2.9",
+    "csswring": "^3.0.5",
+    "grunt-contrib-csslint": "~0.3.1",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-sass": "~0.8.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-postcss": "^0.5.2",
+  },
+  "engine": "node >= 0.4.1",
+  "version": "0.8.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pelo8888/customizable-grid-system.git"
+  },
+  "keywords": [
+    "Grid",
+    "Customizable",
+    "Grilla",
+    "Responsive"
+  ]
+}
