@@ -1,0 +1,30 @@
+@mixin general-grid($up: $margin-up, $right: $margin-right,
+                    $bottom: $margin-bottom, $left: $margin-left) {
+  display: block;
+  float: left;
+  @if $up == 'no-margin' {
+    margin: 0;
+  } @else {
+    margin: $up $right $bottom $left;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+@mixin row-of-col($margin: $margin-left) {
+  $iter-col: 0;
+  $iter-row: 0;
+
+  @for $iter-col from 1 to $cant-col + 1 {
+    $iter-row: 0;
+    @for $iter-row from 1 to $iter-col + 1 {
+      $class: '.col' + $iter-row + '-of-' + $iter-col;
+
+      &#{$class} {
+        width: calculatewidth($iter-row, $iter-col, $margin);
+      }
+    }
+  }
+}

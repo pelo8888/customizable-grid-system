@@ -1,0 +1,12 @@
+@function calculatewidth($cant, $total, $margin-left) {
+  $diff: ($margin-left / $total) * ($total - $cant);
+  $cuota: (100 * $cant) / $total;
+
+  $result: $cuota - $diff;
+
+  @if $result == 0 {
+    @return $result;
+  } @else {
+    @return $result + 0%;
+  }
+}

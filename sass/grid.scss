@@ -1,0 +1,27 @@
+@import 'gridVars';
+@import 'gridFunctions';
+@import 'gridMixins';
+
+//CONTENEDOR DE LA GRILLA
+.grid_conteiner {
+  clear: both;
+  content: '';
+  display: table;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  &:after {
+    clear: both;
+  }
+}
+
+.grid {
+  @include general-grid;
+  @include row-of-col;
+}
+
+.no-margin {
+  @include general-grid('no-margin');
+  @include row-of-col(0);
+}
