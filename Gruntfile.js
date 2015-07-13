@@ -92,9 +92,6 @@ module.exports = function(grunt) {
     },
   });
 
-  /* For general use */
-  grunt.loadNpmTasks('grunt-contrib-watch');
-
   /* For styles */
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
