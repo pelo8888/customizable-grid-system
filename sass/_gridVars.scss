@@ -1,7 +1,14 @@
+$string-name:'.col';
+$string-separator:'-of-';
+
 $margin-up: 1%;
 $margin-bottom: 1%;
-$margin-left: 1.6%;
-$margin-right: 0;
+$margin-left: .5%;
+$margin-right: .5%;
 
-$max-width: 200px;
+$margin-conteiner: .5%;
+$width-conteiner: 100 - ($margin-conteiner * 2);
+
+
+$max-width: 600px;
 $cant-col: 12;

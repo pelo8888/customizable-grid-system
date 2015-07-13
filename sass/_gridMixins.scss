@@ -5,7 +5,7 @@
   @if $up == 'no-margin' {
     margin: 0;
   } @else {
-    margin: $up $right $bottom $left;
+    margin: $up 0 $bottom $left;
   }
 
   &:first-child {
@@ -20,7 +20,7 @@
   @for $iter-col from 1 to $cant-col + 1 {
     $iter-row: 0;
     @for $iter-row from 1 to $iter-col + 1 {
-      $class: '.col' + $iter-row + '-of-' + $iter-col;
+      $class: $string-name + $iter-row + $string-separator + $iter-col;
 
       &#{$class} {
         width: calculatewidth($iter-row, $iter-col, $margin);

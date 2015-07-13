@@ -1,19 +1,26 @@
 @import 'gridVars';
 @import 'gridFunctions';
 @import 'gridMixins';
+@import 'gridMediaquery';
 
 //CONTENEDOR DE LA GRILLA
-.grid_conteiner {
-  clear: both;
+.grid-conteiner {
+//  clear: both;
   content: '';
   display: table;
   margin: 0;
   padding: 0;
   width: 100%;
 
+  &.margin {
+    margin: $margin-conteiner;
+    width: $width-conteiner;
+  }
+
   &:after {
     clear: both;
   }
+
 }
 
 .grid {
