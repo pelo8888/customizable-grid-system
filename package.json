@@ -14,7 +14,8 @@
     "grunt-contrib-cssmin": "~0.10.0",
     "grunt-contrib-sass": "~0.8.1",
     "grunt-scss-lint": "^0.3.4",
-    "grunt-postcss": "^0.5.2"
+    "grunt-postcss": "^0.5.2",
+    "grunt-shell": "^1.1.2"
   },
   "engine": "node >= 0.4.1",
   "version": "0.8.0",

@@ -3,6 +3,21 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    /***
+    * Tarea mediante la cual podemos correr comandos en el shell del SO,
+    *  en expand la usamos para instalar dependencias del frontEnd
+    ***/
+    shell: {
+      checkSassSyntax: {
+        options: { stdout: true },
+        command: [
+        'echo Chequeando la syntaxis del codigo sass',
+        'scss-lint sass/',
+        'echo Chequeo de syntaxis sass finalizado'
+        ].join('&&')
+      }
+    },
+
   /***
   * Genera codigo css a partir de codigo SASS
   ***/
@@ -36,7 +51,7 @@ module.exports = function(grunt) {
             '<%= grunt.template.today("yyyy-mm-dd") %> */',
         },
         files: {
-          'build/css/<%= pkg.name %>.min.css': ['css/*.css']
+          'css/grid.min.css': ['css/*.css', '!css/*.min.css']
         }
       }
     },
@@ -98,7 +113,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-scss-lint');
   grunt.loadNpmTasks('grunt-postcss');
-
+  grunt.loadNpmTasks('grunt-shell');
 
   /****
   * TASKS - TO USE WITH 'GRUNT TASKNAME'
