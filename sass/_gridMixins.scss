@@ -8,7 +8,7 @@
     margin: $up 0 $bottom $left;
   }
 
-  &:first-child {
+  &:first-of-type {
     margin-left: 0;
   }
 }

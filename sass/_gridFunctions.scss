@@ -1,5 +1,5 @@
-@function calculatewidth($cant, $total, $margin-left) {
-  $diff: ($margin-left / $total) * ($total - $cant);
+@function calculatewidth($cant, $total, $margin: $margin-left) {
+  $diff: ($margin / $total) * ($total - $cant);
   $cuota: (100 * $cant) / $total;
 
   $result: $cuota - $diff;
