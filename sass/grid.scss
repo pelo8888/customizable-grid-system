@@ -1,7 +1,6 @@
 @import 'gridVars';
 @import 'gridFunctions';
 @import 'gridMixins';
-@import 'gridMediaquery';
 
 //CONTENEDOR DE LA GRILLA
 .grid-conteiner {
@@ -32,3 +31,5 @@
   @include general-grid('no-margin');
   @include row-of-col(0);
 }
+
+@import 'gridMediaquery';
