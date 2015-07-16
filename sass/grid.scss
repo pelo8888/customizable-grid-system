@@ -3,7 +3,7 @@
 @import 'gridMixins';
 
 //CONTENEDOR DE LA GRILLA
-.grid-conteiner {
+.grid-container {
 //  clear: both;
   content: '';
   display: table;
@@ -12,8 +12,8 @@
   width: 100%;
 
   &.margin {
-    margin: $margin-conteiner;
-    width: $width-conteiner;
+    margin: $margin-container;
+    width: $width-container;
   }
 
   &:after {
