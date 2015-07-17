@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <!-- Responsive and mobile friendly stuff -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/grid.css" media="all">
+  <link rel="stylesheet" href="../css/inputs.css" media="all">
+  <link rel="stylesheet" href="../icons/icomoon/style.css">
+</head>
+
+<!--
+<style>
+  .grid-conteiner {
+    background-color: #464545;
+  }
+
+  .grid-conteiner > .grid {
+    background-color: #e74c3c;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .section1 {
+    background-color: #88ca9b;
+    padding: 5px 0;
+    color: #1B6459;
+  }
+
+  .section2 {
+    background-color: #D99CBA;
+    padding: 5px;
+    color: #51223A;
+  }
+
+  .section3 {
+    background-color: #1B6459;
+    padding: 5px;
+    color: #30b09d;
+  }
+
+  .section4 {
+    background-color: #587ED1;
+    padding: 5px;
+    color: #323A4A;
+  }
+
+  .section1 .grid {
+    background-color: #D9C58D;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .section2 .grid {
+    background-color: #38D1BA;
+    padding: 15px 0;
+    text-align:center;
+  }
+
+  .section3 .grid {
+    background-color: #D9C58D;
+    padding: 15px 0;
+    text-align:center;
+  }
+
+  .section4 .grid {
+    background-color: #38D1BA;
+    padding: 15px 0;
+    text-align:center;
+  }
+
+  .code {
+    max-width: 520px;
+    background-color: #fff;
+    color: #000;
+    margin: 5px;
+  }
+
+  h4 {
+    text-align: center;
+    color: #fff;
+  }
+</style>
+-->
+
+<body>
+    <div class="header"><h1>Let's start with inputs</h1></div>
+
+
+    <div class="header"><h1>Text inputs</h1></div>
+    
+    <xmp class="code">
+        <div class="grid-conteiner">
+          <div class="grid col1-of-2">
+            <span>Name</span>
+            <input type="text"></input>
+          </div>
+          <div class="grid col1-of-2">
+            <span>Surname</span>
+            <input type="text"></input>
+          </div>
+      </div>
+    </xmp>
+    <section class="section1">
+      <div class="grid-conteiner">
+          <div class="grid col1-of-2">
+            <span>Name</span>
+            <input type="text"></input>
+          </div>
+          <div class="grid col1-of-2">
+            <span>Surname</span>
+            <input type="text"></input>
+          </div>
+      </div>
+    </section>
+
+    <div class="header"><h1>Error inputs</h1></div>
+    <div>When detect error add attribute data-error by javascript</div>
+    <xmp class="code">
+        <div class="grid-conteiner">
+          <div class="grid col1-of-2" data-error>
+            <span>Name</span>
+            <input type="text" ></input>
+          </div>
+          <div class="grid col1-of-2" data-error>
+            <span>Surname</span>
+            <input type="text" ></input>
+          </div>
+        </div>
+    </xmp>
+
+    <section class="section1">
+        <div class="grid-conteiner">
+          <div class="grid col1-of-2" data-error>
+            <span>Name</span>
+            <input type="text" ></input>
+          </div>
+          <div class="grid col1-of-2" data-error>
+            <span>Surname</span>
+            <input type="text" ></input>
+          </div>
+        </div>
+    </section>
+
+</body>
+</html>
