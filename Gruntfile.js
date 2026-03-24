@@ -51,7 +51,8 @@ module.exports = function(grunt) {
             '<%= grunt.template.today("yyyy-mm-dd") %> */',
         },
         files: {
-          'css/grid.min.css': ['css/*.css', '!css/*.min.css']
+          'css/grid.min.css': ['css/grid.css'],
+          'css/inputs.min.css': ['css/inputs.css']
         }
       }
     },
@@ -125,7 +126,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('compile', ['qualitycss',
                                  'shell:checkSassSyntax',
-                                 'sass',
                                  'postcss',
                                  'compress']);
 };

@@ -4,12 +4,15 @@
 
 //CONTENEDOR DE LA GRILLA
 .grid-container {
-//  clear: both;
-  content: '';
-  display: table;
   margin: 0;
   padding: 0;
   width: 100%;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
 
   &.margin {
     margin: $margin-container;

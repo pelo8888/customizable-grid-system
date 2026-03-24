@@ -1,9 +1,11 @@
 .grid-container {
-  content: '';
-  display: table;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+.grid-container:before, .grid-container:after {
+  content: '';
+  display: table;
 }
 .grid-container.margin {
   margin: 0.5%;
