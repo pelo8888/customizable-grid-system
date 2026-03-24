@@ -21,12 +21,7 @@ A simple, lightweight, and customizable responsive grid system built with SASS. 
     ```bash
     npm install
     ```
-    This will install Grunt and the necessary plugins (SASS, PostCSS, CSSMin, etc.).
-
-3.  **Install Grunt CLI (if not already installed):**
-    ```bash
-    npm install -g grunt-cli
-    ```
+    This installs the modern Sass/PostCSS toolchain used to build the distributed CSS files.
 
 ## Usage
 
@@ -112,12 +107,18 @@ You can customize the grid by editing `sass/_gridVars.scss`.
 
 ## Build Commands
 
-Run these commands using Grunt:
+Run these commands using npm scripts:
 
-*   `grunt compile`: Compiles SASS, adds vendor prefixes, checks syntax, and minifies the CSS.
-*   `grunt qualitycss`: Runs SASS compilation and CSS Lint.
-*   `grunt compress`: Minifies the CSS.
-*   `grunt shell:checkSassSyntax`: Checks SASS syntax using `scss-lint` (requires `scss-lint` Ruby gem).
+*   `npm run build`: Compiles Sass, applies PostCSS/autoprefixer, and writes `css/grid.min.css` and `css/inputs.min.css`.
+*   `npm run build:compile`: Compiles the Sass sources into expanded CSS.
+*   `npm run build:prefix`: Runs PostCSS/autoprefixer on the generated CSS files.
+*   `npm run build:minify`: Writes the minified distributable CSS outputs.
+*   `npm run check`: Alias for the full build pipeline.
+
+## Tooling Notes
+
+*   The default build no longer depends on Grunt or the Ruby `scss-lint` gem.
+*   `Gruntfile.js` is still present as a legacy build path, but npm scripts are the supported workflow moving forward.
 
 ## Example
 

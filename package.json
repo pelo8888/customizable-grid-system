@@ -1,23 +1,33 @@
 {
-  "name": "Customizable-grid-system",
-  "description": "",
+  "name": "customizable-grid-system",
+  "description": "A lightweight, customizable responsive grid system built with Sass.",
   "author": "Alejandro Fontes <pelo8888@gmail.com>",
-  "url": "",
-  "dependencies": {
-    "grunt": "~0.4.5"
+  "license": "MIT",
+  "homepage": "https://github.com/pelo8888/customizable-grid-system",
+  "scripts": {
+    "build": "npm run build:compile && npm run build:prefix && npm run build:minify",
+    "build:compile": "sass sass:css --style=expanded --no-source-map",
+    "build:prefix": "postcss \"css/*.css\" --replace",
+    "build:minify": "npm run build:minify:grid && npm run build:minify:inputs",
+    "build:minify:grid": "postcss css/grid.css --config postcss.minify.config.cjs -o css/grid.min.css",
+    "build:minify:inputs": "postcss css/inputs.css --config postcss.minify.config.cjs -o css/inputs.min.css",
+    "check": "npm run build"
   },
   "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
-    "closure-linter-wrapper": "~0.2.9",
-    "csswring": "^3.0.5",
-    "grunt-contrib-csslint": "~0.3.1",
-    "grunt-contrib-cssmin": "~0.10.0",
-    "grunt-contrib-sass": "~0.8.1",
-    "grunt-scss-lint": "^0.3.4",
-    "grunt-postcss": "^0.5.2",
-    "grunt-shell": "^1.1.2"
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.1",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.93.2"
   },
-  "engine": "node >= 0.4.1",
+  "engines": {
+    "node": ">=18"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
   "version": "0.8.0",
   "repository": {
     "type": "git",
