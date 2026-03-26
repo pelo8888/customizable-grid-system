@@ -19,14 +19,9 @@ A simple, lightweight, and customizable responsive grid system built with SASS. 
 2.  **Install dependencies:**
     Make sure you have [Node.js](https://nodejs.org/) installed. Then run:
     ```bash
-    npm install
+    npm ci
     ```
-    This will install Grunt and the necessary plugins (SASS, PostCSS, CSSMin, etc.).
-
-3.  **Install Grunt CLI (if not already installed):**
-    ```bash
-    npm install -g grunt-cli
-    ```
+    This installs the Sass/PostCSS toolchain used to build the distributed CSS files from the committed lockfile.
 
 ## Usage
 
@@ -112,12 +107,22 @@ You can customize the grid by editing `sass/_gridVars.scss`.
 
 ## Build Commands
 
-Run these commands using Grunt:
+Run these commands using npm scripts:
 
-*   `grunt compile`: Compiles SASS, adds vendor prefixes, checks syntax, and minifies the CSS.
-*   `grunt qualitycss`: Runs SASS compilation and CSS Lint.
-*   `grunt compress`: Minifies the CSS.
-*   `grunt shell:checkSassSyntax`: Checks SASS syntax using `scss-lint` (requires `scss-lint` Ruby gem).
+*   `npm run build`: Compiles Sass, applies PostCSS/autoprefixer, and writes `css/grid.min.css` and `css/inputs.min.css`.
+*   `npm run build:compile`: Compiles the Sass sources into expanded CSS.
+*   `npm run build:prefix`: Runs PostCSS/autoprefixer on the generated CSS files.
+*   `npm run build:minify`: Writes the minified distributable CSS outputs.
+*   `npm run lint`: Lints the Sass source files with Stylelint.
+*   `npm test`: Rebuilds the CSS outputs and runs regression checks against the generated files.
+*   `npm run check`: Runs linting plus the generated CSS regression checks.
+
+## Development Workflow
+
+*   The supported workflow is based on npm scripts plus the Sass and PostCSS CLIs.
+*   The repository includes a committed `package-lock.json` so local installs and CI use the same dependency graph.
+*   Continuous integration runs `npm ci` followed by `npm run check` on each push and pull request.
+*   Published package contents are limited to the distributable CSS, Sass source, and README.
 
 ## Example
 

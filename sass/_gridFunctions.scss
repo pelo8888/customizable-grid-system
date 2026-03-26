@@ -1,7 +1,9 @@
-@function calculatewidth($cant, $total, $margin: $margin-left) {
-  $diff: ($margin / $total) * ($total - $cant);
-  $cuota: (100 * $cant) / $total;
+@use 'sass:math';
+@use 'gridVars' as vars;
 
+@function calculatewidth($cant, $total, $margin: vars.$margin-left) {
+  $diff: math.div($margin, $total) * ($total - $cant);
+  $cuota: math.div(100 * $cant, $total);
   $result: $cuota - $diff;
 
   @if $result == 0 {
