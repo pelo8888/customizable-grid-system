@@ -1,38 +1,37 @@
-@import 'gridVars';
-@import 'gridFunctions';
-@import 'gridMixins';
+@use 'gridMediaquery';
+@use 'gridMixins';
+@use 'gridVars' as vars;
 
-//CONTENEDOR DE LA GRILLA
+// CONTENEDOR DE LA GRILLA
 .grid-container {
   margin: 0;
   padding: 0;
   width: 100%;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     display: table;
   }
 
   &.margin {
-    margin: $margin-container;
-    width: $width-container;
+    margin: vars.$margin-container;
+    width: vars.$width-container;
   }
 
-  &:after {
+  &::after {
     clear: both;
   }
-
 }
 
 .grid {
-  @include general-grid;
-  @include row-of-col;
+  @include gridMixins.general-grid;
+  @include gridMixins.row-of-col;
 }
 
 .no-margin {
-  @include general-grid('no-margin');
-  @include row-of-col(0);
+  @include gridMixins.general-grid('no-margin');
+  @include gridMixins.row-of-col(0);
 }
 
-@import 'gridMediaquery';
+@include gridMediaquery.mediaquery-grid;

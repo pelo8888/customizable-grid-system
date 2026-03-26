@@ -1,25 +1,30 @@
+@use 'gridFunctions';
+@use 'gridVars' as vars;
+
 @mixin responsive-grid($helper-class, $columns-per-row) {
   .#{$helper-class} {
     &:nth-of-type(#{$columns-per-row}n + 1) {
       margin-left: 0;
     }
 
-    @for $iter-col from 1 through $cant-col {
+    @for $iter-col from 1 through vars.$cant-col {
       @for $iter-row from 1 through $iter-col {
-        $class: $string-name + $iter-row + $string-separator + $iter-col;
+        $class: vars.$string-name + $iter-row + vars.$string-separator + $iter-col;
 
         &#{$class} {
-          width: calculatewidth(1, $columns-per-row);
+          width: gridFunctions.calculatewidth(1, $columns-per-row);
         }
       }
     }
   }
 }
 
-//Si se alcanza el max width entonces pasar todas las columnas
-// a 100% de ancho y reseteo los margenes
-@media only screen and (max-width: $max-width) {
-  @include responsive-grid('mq-small', 3);
-  @include responsive-grid('mq-medium', 2);
-  @include responsive-grid('mq-big', 1);
+@mixin mediaquery-grid {
+  // Si se alcanza el max width entonces pasar todas las columnas
+  // a 100% de ancho y reseteo los margenes
+  @media only screen and (max-width: vars.$max-width) {
+    @include responsive-grid('mq-small', 3);
+    @include responsive-grid('mq-medium', 2);
+    @include responsive-grid('mq-big', 1);
+  }
 }

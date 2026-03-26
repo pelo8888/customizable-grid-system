@@ -1,395 +1,393 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <!-- Responsive and mobile friendly stuff -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Grid System Examples</title>
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <link rel="stylesheet" type="text/css" href="../css/grid.css" media="all">
-
-    <title>Customizable-grid-system</title>
+    <link rel="stylesheet" href="../css/grid.css" media="all">
+    <link rel="stylesheet" href="../css/inputs.css" media="all">
+    <link rel="stylesheet" href="stylesheets/examples.css" media="all">
   </head>
 
-<style>
-  .grid-container {
-    background-color: #464545;
-  }
-
-  .grid-container > .grid {
-    background-color: #e74c3c;
-    padding: 15px 0;
-    text-align: center;
-  }
-
-  .section1 {
-    padding: 5px 0;
-    color: #1B6459;
-  }
-
-  .section2 {
-    padding: 5px;
-    color: #51223A;
-  }
-
-  .section3 {
-    padding: 5px;
-    color: #30b09d;
-  }
-
-  .section4 {
-    padding: 5px;
-    color: #323A4A;
-  }
-
-  .section1 .grid {
-    background-color: #D9C58D;
-    padding: 15px 0;
-    text-align: center;
-  }
-
-  .section2 .grid {
-    background-color: #38D1BA;
-    padding: 15px 0;
-    text-align:center;
-  }
-
-  .section3 .grid {
-    background-color: #D9C58D;
-    padding: 15px 0;
-    text-align:center;
-  }
-
-  .section4 .grid {
-    background-color: #38D1BA;
-    padding: 15px 0;
-    text-align:center;
-  }
-
-  .code {
-    max-width: 520px;
-    background-color: #fff;
-    color: #000;
-    margin: 5px;
-  }
-
-  h4 {
-    text-align: center;
-    color: #fff;
-  }
-</style>
-
   <body>
-
-    <header>
-      <div class="container">
-        <h1>Customizable-grid-system</h1>
-        <h2>A simple and customizable grid system made with sass</h2>
-      </div>
-    </header>
-
-<div class="container">
-
-<div class="header"><h1>Customizable Grid System</h1></div>
-
-    <div class="header"><h1>Let's start with containers</h1></div>
-    <section class="section1">
-      <div><h3>Default container</h3></div>
-
-      <xmp class="code">
-        <div class="grid-container">
-          <h4>I'm a default container</h1>
-          <div class="grid col1-of-2">1 of 2</div>
-          <div class="grid col1-of-2">1 of 2</div>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main class="page">
+      <section class="hero" id="main-content">
+        <div class="hero-topline">
+          <p class="eyebrow">Example Page</p>
+          <div class="hero-chips" aria-label="Project facts">
+            <span class="chip">12 columns</span>
+            <span class="chip">650px breakpoint</span>
+            <span class="chip">Sass source + CSS output</span>
+          </div>
         </div>
-      </xmp>
 
-      <div class="grid-container">
-        <h4>I'm a default container</h1>
-        <div class="grid col1-of-2">1 of 2</div>
-        <div class="grid col1-of-2">1 of 2</div>
-      </div>
-
-      <div><h3>container with left and right margin</h3></div>
-
-      <xmp class="code">
-        <div class="grid-container margin">
-          <h4>I'm a container with margin</h1>
-          <div class="grid col1-of-2">1 of 2</div>
-          <div class="grid col1-of-2">1 of 2</div>
+        <div class="hero-copy">
+          <h1>Customizable Grid System</h1>
+          <p>
+            This page is now structured as an actual working guide: common layouts, responsive
+            helpers, generated input styles, copyable snippets, and a small reference for the
+            variables that control the system.
+          </p>
+          <p>
+            Resize the viewport to see the helper classes react. The live breakpoint panel below
+            reads the current viewport width and tells you when the responsive helpers are active.
+          </p>
         </div>
-      </xmp>
 
-      <div class="grid-container margin">
-        <h4>I'm a container with margin</h1>
-        <div class="grid col1-of-2">1 of 2</div>
-        <div class="grid col1-of-2">1 of 2</div>
-      </div>
-    </section>
+        <nav class="quick-links" aria-label="Example sections">
+          <a href="#containers">Containers</a>
+          <a href="#recipes">Recipes</a>
+          <a href="#responsive">Responsive</a>
+          <a href="#reference">Reference</a>
+          <a href="#inputs">Inputs</a>
+          <a href="#customize">Customize</a>
+        </nav>
 
-    <div class="header"><h1>Basic combinations</h1></div>
-
-    <section class="section2">
-      <div><h3>Two Columns</h3></div>
-      <xmp class="code">
-        <div class="grid-container">
-          <div class="grid col1-of-2">1 of 2</div>
-          <div class="grid col1-of-2">1 of 2</div>
+        <div class="grid-container hero-grid">
+          <article class="grid col3-of-12 mq-medium stat-card">
+            <span class="hero-label">Container</span>
+            <span class="hero-value">`.grid-container`</span>
+            <span class="hero-note">Base row wrapper</span>
+          </article>
+          <article class="grid col3-of-12 mq-medium stat-card">
+            <span class="hero-label">Modifier</span>
+            <span class="hero-value">`.margin`</span>
+            <span class="hero-note">Outer inset on the row</span>
+          </article>
+          <article class="grid col3-of-12 mq-medium stat-card">
+            <span class="hero-label">Gapless Option</span>
+            <span class="hero-value">`.no-margin`</span>
+            <span class="hero-note">Edge-joined columns</span>
+          </article>
+          <article class="grid col3-of-12 mq-medium viewport-card" data-breakpoint="650">
+            <span class="hero-label">Viewport State</span>
+            <strong class="viewport-value" data-viewport-width>-- px</strong>
+            <span class="viewport-status" data-breakpoint-state aria-live="polite">Checking breakpoint…</span>
+          </article>
         </div>
-      </xmp>
+      </section>
 
-      <div class="grid-container">
-        <div class="grid col1-of-2">1 of 2</div>
-        <div class="grid col1-of-2">1 of 2</div>
-      </div>
-
-      <div><h3>Three Columns</h3></div>
-      <xmp class="code">
-        <div class="grid-container">
-          <div class="grid col1-of-3">1 of 3</div>
-          <div class="grid col1-of-3">1 of 3</div>
-          <div class="grid col1-of-3">1 of 3</div>
+      <section class="section" id="containers">
+        <div class="section-head">
+          <p class="eyebrow">1</p>
+          <h2>Containers And Margins</h2>
+          <p>
+            Start with a plain container when the row should occupy the full line. Add `.margin`
+            when the row itself needs breathing room against the viewport.
+          </p>
         </div>
-      </xmp>
 
-      <div class="grid-container">
-        <div class="grid col1-of-3">1 of 3</div>
-        <div class="grid col1-of-3">1 of 3</div>
-        <div class="grid col1-of-3">1 of 3</div>
-      </div>
+        <div class="example-grid">
+          <article class="example-card">
+            <h3>Default Container</h3>
+            <p>The row uses the standard grid spacing and fills the available width.</p>
+            <div class="demo-surface">
+              <div class="grid-container demo-grid">
+                <div class="grid col1-of-2">1 of 2</div>
+                <div class="grid col1-of-2">1 of 2</div>
+              </div>
+            </div>
+            <div class="snippet-shell">
+              <button class="snippet-copy" type="button" data-copy-button aria-label="Copy default container snippet">Copy</button>
+              <pre class="snippet"><code>&lt;div class="grid-container"&gt;
+  &lt;div class="grid col1-of-2"&gt;1 of 2&lt;/div&gt;
+  &lt;div class="grid col1-of-2"&gt;1 of 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </article>
 
-      <div><h3>Four Columns</h3></div>
-
-      <xmp class="code">
-        <div class="grid-container">
-          <div class="grid col1-of-4">1 of 4</div>
-          <div class="grid col1-of-4">1 of 4</div>
-          <div class="grid col1-of-4">1 of 4</div>
-          <div class="grid col1-of-4">1 of 4</div>
+          <article class="example-card">
+            <h3>Container With Outer Margin</h3>
+            <p>The `.margin` modifier applies a small outer inset to the container itself.</p>
+            <div class="demo-surface">
+              <div class="grid-container margin demo-grid">
+                <div class="grid col1-of-4">1 of 4</div>
+                <div class="grid col2-of-4">2 of 4</div>
+                <div class="grid col1-of-4">1 of 4</div>
+              </div>
+            </div>
+            <div class="snippet-shell">
+              <button class="snippet-copy" type="button" data-copy-button aria-label="Copy container with margin snippet">Copy</button>
+              <pre class="snippet"><code>&lt;div class="grid-container margin"&gt;
+  &lt;div class="grid col1-of-4"&gt;1 of 4&lt;/div&gt;
+  &lt;div class="grid col2-of-4"&gt;2 of 4&lt;/div&gt;
+  &lt;div class="grid col1-of-4"&gt;1 of 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </article>
         </div>
-      </xmp>
+      </section>
 
-      <div class="grid-container">
-        <div class="grid col1-of-4">1 of 4</div>
-        <div class="grid col1-of-4">1 of 4</div>
-        <div class="grid col1-of-4">1 of 4</div>
-        <div class="grid col1-of-4">1 of 4</div>
-      </div>
-
-      <div><h3>Five Columns</h3></div>
-      <xmp class="code">
-        <div class="grid-container">
-          <div class="grid col1-of-5">1 of 5</div>
-          <div class="grid col1-of-5">1 of 5</div>
-          <div class="grid col1-of-5">1 of 5</div>
-          <div class="grid col1-of-5">1 of 5</div>
-          <div class="grid col1-of-5">1 of 5</div>
+      <section class="section" id="recipes">
+        <div class="section-head">
+          <p class="eyebrow">2</p>
+          <h2>Layout Recipes</h2>
+          <p>
+            Instead of listing every denominator, these examples focus on patterns you are likely
+            to reuse in real pages: split content, galleries, and denser rows.
+          </p>
         </div>
-      </xmp>
 
-      <div class="grid-container">
-        <div class="grid col1-of-5">1 of 5</div>
-        <div class="grid col1-of-5">1 of 5</div>
-        <div class="grid col1-of-5">1 of 5</div>
-        <div class="grid col1-of-5">1 of 5</div>
-        <div class="grid col1-of-5">1 of 5</div>
-      </div>
+        <div class="example-grid">
+          <article class="example-card">
+            <h3>Article + Sidebar</h3>
+            <p>A common editorial split using 8 columns for content and 4 for supporting blocks.</p>
+            <div class="demo-surface">
+              <div class="grid-container demo-grid">
+                <div class="grid col8-of-12">Main content</div>
+                <div class="grid col4-of-12">Sidebar</div>
+              </div>
+            </div>
+            <div class="snippet-shell">
+              <button class="snippet-copy" type="button" data-copy-button aria-label="Copy article and sidebar layout snippet">Copy</button>
+              <pre class="snippet"><code>&lt;div class="grid-container"&gt;
+  &lt;div class="grid col8-of-12"&gt;Main content&lt;/div&gt;
+  &lt;div class="grid col4-of-12"&gt;Sidebar&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </article>
 
-      <div><h3>Six Columns</h3></div>
-      <div class="grid-container">
-        <div class="grid col1-of-6">1 of 6</div>
-        <div class="grid col1-of-6">1 of 6</div>
-        <div class="grid col1-of-6">1 of 6</div>
-        <div class="grid col1-of-6">1 of 6</div>
-        <div class="grid col1-of-6">1 of 6</div>
-        <div class="grid col1-of-6">1 of 6</div>
-      </div>
+          <article class="example-card">
+            <h3>Feature Strip</h3>
+            <p>Balanced content blocks with a 3-6-3 rhythm across the row.</p>
+            <div class="demo-surface">
+              <div class="grid-container demo-grid">
+                <div class="grid col3-of-12">Lead-in</div>
+                <div class="grid col6-of-12">Primary feature</div>
+                <div class="grid col3-of-12">CTA</div>
+              </div>
+            </div>
+            <div class="snippet-shell">
+              <button class="snippet-copy" type="button" data-copy-button aria-label="Copy feature strip layout snippet">Copy</button>
+              <pre class="snippet"><code>&lt;div class="grid-container"&gt;
+  &lt;div class="grid col3-of-12"&gt;Lead-in&lt;/div&gt;
+  &lt;div class="grid col6-of-12"&gt;Primary feature&lt;/div&gt;
+  &lt;div class="grid col3-of-12"&gt;CTA&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </article>
 
-      <div><h3>Seven Columns</h3></div>
-      <div class="grid-container">
-        <div class="grid col1-of-7">1 of 7</div>
-        <div class="grid col1-of-7">1 of 7</div>
-        <div class="grid col1-of-7">1 of 7</div>
-        <div class="grid col1-of-7">1 of 7</div>
-        <div class="grid col1-of-7">1 of 7</div>
-        <div class="grid col1-of-7">1 of 7</div>
-        <div class="grid col1-of-7">1 of 7</div>
-      </div>
-
-      <div><h3>Eight Columns</h3></div>
-      <div class="grid-container">
-        <div class="grid col1-of-8">1 of 8</div>
-        <div class="grid col1-of-8">1 of 8</div>
-        <div class="grid col1-of-8">1 of 8</div>
-        <div class="grid col1-of-8">1 of 8</div>
-        <div class="grid col1-of-8">1 of 8</div>
-        <div class="grid col1-of-8">1 of 8</div>
-        <div class="grid col1-of-8">1 of 8</div>
-        <div class="grid col1-of-8">1 of 8</div>
-      </div>
-
-      <div><h3>Nine Columns</h3></div>
-      <div class="grid-container">
-        <div class="grid col1-of-9">1 of 9</div>
-        <div class="grid col1-of-9">1 of 9</div>
-        <div class="grid col1-of-9">1 of 9</div>
-        <div class="grid col1-of-9">1 of 9</div>
-        <div class="grid col1-of-9">1 of 9</div>
-        <div class="grid col1-of-9">1 of 9</div>
-        <div class="grid col1-of-9">1 of 9</div>
-        <div class="grid col1-of-9">1 of 9</div>
-        <div class="grid col1-of-9">1 of 9</div>
-      </div>
-
-      <div><h3>Ten Columns</h3></div>
-      <div class="grid-container">
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-      </div>
-
-      <div><h3>Eleven Columns</h3></div>
-      <div class="grid-container">
-        <div class="grid col1-of-11">1 of 11</div>
-        <div class="grid col1-of-11">1 of 11</div>
-        <div class="grid col1-of-11">1 of 11</div>
-        <div class="grid col1-of-11">1 of 11</div>
-        <div class="grid col1-of-11">1 of 11</div>
-        <div class="grid col1-of-11">1 of 11</div>
-        <div class="grid col1-of-11">1 of 11</div>
-        <div class="grid col1-of-11">1 of 11</div>
-        <div class="grid col1-of-11">1 of 11</div>
-        <div class="grid col1-of-11">1 of 11</div>
-        <div class="grid col1-of-11">1 of 11</div>
-      </div>
-
-      <div><h3>Twelve columns</h3></div>
-      <div class="grid-container">
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col1-of-12">1 of 12</div>
-      </div>
-    </section>
-
-    <div class="header"><h1>Some combinations...</h1></div>
-
-    <section class="section3">
-      <div><h3>Combination 1</h3></div>
-      <div class="grid-container">
-        <div class="grid col1-of-12">1 of 12</div>
-        <div class="grid col2-of-12">2 of 12</div>
-        <div class="grid col4-of-12">4 of 12</div>
-        <div class="grid col5-of-12">5 of 12</div>
-      </div>
-
-      <div><h3>Combination 2</h3></div>
-      <div class="grid-container">
-        <div class="grid col4-of-12">4 of 12</div>
-        <div class="grid col4-of-12">4 of 12</div>
-        <div class="grid col4-of-12">4 of 12</div>
-      </div>
-
-      <div><h3>Combination 3</h3></div>
-      <div class="grid-container">
-        <div class="grid col3-of-12">3 of 12</div>
-        <div class="grid col6-of-12">6 of 12</div>
-        <div class="grid col3-of-12">3 of 12</div>
-      </div>
-
-      <div><h3>Combination 4</h3></div>
-      <div class="grid-container">
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col4-of-10">4 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col1-of-10">1 of 10</div>
-        <div class="grid col2-of-10">2 of 10</div>
-      </div>
-
-      <div><h3>Combination 5</h3></div>
-      <div class="grid-container">
-        <div class="grid col3-of-12">3 of 12</div>
-        <div class="grid col2-of-12">2 of 12</div>
-      </div>
-    </section>
-
-    <div class="header"><h1>Media Queries</h1></div>
-
-    <section class="section4">
-      <div><h2>In this example the breakpoint is set to 650px</h3></div>
-      <div><h3>Five columns with 'mq-small' (3 columns)</h3></div>
-
-      <xmp class="code">
-        <div class="grid-container">
-          <div class="grid col1-of-5 mq-small">1 of 5</div>
-          <div class="grid col1-of-5 mq-small">1 of 5</div>
-          <div class="grid col1-of-5 mq-small">1 of 5</div>
-          <div class="grid col1-of-5 mq-small">1 of 5</div>
-          <div class="grid col1-of-5 mq-small">1 of 5</div>
+          <article class="example-card">
+            <h3>Dense Gallery Row</h3>
+            <p>Use smaller equal fractions when you want many units to scan as one block.</p>
+            <div class="demo-surface">
+              <div class="grid-container demo-grid no-margin">
+                <div class="no-margin col1-of-4">Card</div>
+                <div class="no-margin col1-of-4">Card</div>
+                <div class="no-margin col1-of-4">Card</div>
+                <div class="no-margin col1-of-4">Card</div>
+              </div>
+            </div>
+            <div class="snippet-shell">
+              <button class="snippet-copy" type="button" data-copy-button aria-label="Copy dense gallery layout snippet">Copy</button>
+              <pre class="snippet"><code>&lt;div class="grid-container"&gt;
+  &lt;div class="no-margin col1-of-4"&gt;Card&lt;/div&gt;
+  &lt;div class="no-margin col1-of-4"&gt;Card&lt;/div&gt;
+  &lt;div class="no-margin col1-of-4"&gt;Card&lt;/div&gt;
+  &lt;div class="no-margin col1-of-4"&gt;Card&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </article>
         </div>
-      </xmp>
+      </section>
 
-      <div class="grid-container">
-        <div class="grid col1-of-5 mq-small">1 of 5</div>
-        <div class="grid col1-of-5 mq-small">1 of 5</div>
-        <div class="grid col1-of-5 mq-small">1 of 5</div>
-        <div class="grid col1-of-5 mq-small">1 of 5</div>
-        <div class="grid col1-of-5 mq-small">1 of 5</div>
-      </div>
-
-      <div><h3>Three columns with 'mq-medium' (2 columns)</h3></div>
-
-      <xmp class="code">
-        <div class="grid-container">
-          <div class="grid col1-of-3 mq-medium">1-of-3</div>
-          <div class="grid col1-of-3 mq-medium">1-of-3</div>
-          <div class="grid col1-of-3 mq-medium">1-of-3</div>
+      <section class="section" id="responsive">
+        <div class="section-head">
+          <p class="eyebrow">3</p>
+          <h2>Responsive Helpers</h2>
+          <p>
+            The helpers override width below the configured breakpoint so you can keep desktop
+            fractions in place while forcing a simpler mobile layout.
+          </p>
         </div>
-      </xmp>
 
-      <div class="grid-container">
-        <div class="grid col1-of-3 mq-medium">1-of-3</div>
-        <div class="grid col1-of-3 mq-medium">1-of-3</div>
-        <div class="grid col1-of-3 mq-medium">1-of-3</div>
-      </div>
+        <div class="example-grid">
+          <article class="example-card">
+            <h3>`mq-small`</h3>
+            <p>Turns items into three-per-row units below 650px.</p>
+            <div class="demo-surface">
+              <div class="grid-container demo-grid">
+                <div class="grid col1-of-5 mq-small">1 of 5</div>
+                <div class="grid col1-of-5 mq-small">1 of 5</div>
+                <div class="grid col1-of-5 mq-small">1 of 5</div>
+                <div class="grid col1-of-5 mq-small">1 of 5</div>
+                <div class="grid col1-of-5 mq-small">1 of 5</div>
+              </div>
+            </div>
+            <div class="snippet-shell">
+              <button class="snippet-copy" type="button" data-copy-button aria-label="Copy mq-small helper snippet">Copy</button>
+              <pre class="snippet"><code>&lt;div class="grid col1-of-5 mq-small"&gt;1 of 5&lt;/div&gt;</code></pre>
+            </div>
+          </article>
 
-      <div><h3>Four columns with 'mq-big' (1 column)</h3></div>
-      <xmp class="code">
-        <div class="grid-container">
-          <div class="grid col1-of-4 mq-big">1 of 4</div>
-          <div class="grid col1-of-4 mq-big">1 of 4</div>
-          <div class="grid col1-of-4 mq-big">1 of 4</div>
-          <div class="grid col1-of-4 mq-big">1 of 4</div>
+          <article class="example-card">
+            <h3>`mq-medium` And `mq-big`</h3>
+            <p>`mq-medium` becomes two columns per row; `mq-big` stacks items full width.</p>
+            <div class="demo-surface">
+              <div class="grid-container demo-grid">
+                <div class="grid col1-of-3 mq-medium">mq-medium</div>
+                <div class="grid col1-of-3 mq-medium">mq-medium</div>
+                <div class="grid col1-of-3 mq-medium">mq-medium</div>
+              </div>
+              <div class="grid-container demo-grid demo-surface-gap">
+                <div class="grid col1-of-4 mq-big">mq-big</div>
+                <div class="grid col1-of-4 mq-big">mq-big</div>
+                <div class="grid col1-of-4 mq-big">mq-big</div>
+                <div class="grid col1-of-4 mq-big">mq-big</div>
+              </div>
+            </div>
+            <div class="snippet-shell">
+              <button class="snippet-copy" type="button" data-copy-button aria-label="Copy mq-medium and mq-big helper snippets">Copy</button>
+              <pre class="snippet"><code>&lt;div class="grid col1-of-3 mq-medium"&gt;mq-medium&lt;/div&gt;
+&lt;div class="grid col1-of-4 mq-big"&gt;mq-big&lt;/div&gt;</code></pre>
+            </div>
+          </article>
         </div>
-      </xmp>
 
-      <div class="grid-container">
-        <div class="grid col1-of-4 mq-big">1 of 4</div>
-        <div class="grid col1-of-4 mq-big">1 of 4</div>
-        <div class="grid col1-of-4 mq-big">1 of 4</div>
-        <div class="grid col1-of-4 mq-big">1 of 4</div>
-      </div>
-    </section>
-</div>
+        <div class="helper-grid">
+          <article class="helper-card">
+            <strong>`mq-small`</strong>
+            <span>Three items per row below the breakpoint.</span>
+          </article>
+          <article class="helper-card">
+            <strong>`mq-medium`</strong>
+            <span>Two items per row below the breakpoint.</span>
+          </article>
+          <article class="helper-card">
+            <strong>`mq-big`</strong>
+            <span>One full-width item per row below the breakpoint.</span>
+          </article>
+        </div>
+      </section>
 
+      <section class="section" id="reference">
+        <div class="section-head">
+          <p class="eyebrow">4</p>
+          <h2>Quick Reference</h2>
+          <p>
+            A compact cheat sheet is more useful than forcing people to inspect the generated CSS
+            when they just need to remember the naming pattern.
+          </p>
+        </div>
+
+        <div class="reference-grid">
+          <article class="reference-card">
+            <h3>Class Pattern</h3>
+            <p><code>.colX-of-Y</code> means an item spans <code>X</code> columns out of <code>Y</code>.</p>
+          </article>
+          <article class="reference-card">
+            <h3>Examples</h3>
+            <ul class="compact-list">
+              <li><code>.col1-of-2</code> for a half-width column</li>
+              <li><code>.col3-of-12</code> for a quarter-width column</li>
+              <li><code>.col8-of-12</code> for a main content area</li>
+            </ul>
+          </article>
+          <article class="reference-card">
+            <h3>Modifiers</h3>
+            <ul class="compact-list">
+              <li><code>.margin</code> adds outer container inset</li>
+              <li><code>.no-margin</code> removes item margins</li>
+              <li><code>.mq-*</code> changes mobile layout below the breakpoint</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="inputs">
+        <div class="section-head">
+          <p class="eyebrow">5</p>
+          <h2>Input Styles</h2>
+          <p>
+            The repo ships input defaults too, so the example page should validate both bundles
+            together instead of treating the grid in isolation.
+          </p>
+        </div>
+
+        <div class="example-grid two-up">
+          <article class="example-card">
+            <h3>Form Preview</h3>
+            <p>These fields are styled by <code>inputs.css</code>, including hover and focus states.</p>
+            <div class="input-stack">
+              <label>
+                Email
+                <input type="email" placeholder="team@example.com">
+              </label>
+              <label>
+                Search
+                <input type="search" placeholder="Search docs">
+              </label>
+              <label>
+                Notes
+                <textarea rows="4" placeholder="Write something..."></textarea>
+              </label>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <h3>Markup</h3>
+            <p>Use the distributed stylesheet directly in the example or downstream project.</p>
+            <div class="snippet-shell">
+              <button class="snippet-copy" type="button" data-copy-button aria-label="Copy inputs stylesheet link snippet">Copy</button>
+              <pre class="snippet"><code>&lt;link rel="stylesheet" href="../css/inputs.css"&gt;</code></pre>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="customize">
+        <div class="section-head">
+          <p class="eyebrow">6</p>
+          <h2>Customize The System</h2>
+          <p>
+            The Sass variables are the real API. Change them, rebuild the generated CSS, and reload
+            this page to validate the result visually.
+          </p>
+        </div>
+
+        <div class="custom-grid">
+          <article class="reference-card">
+            <h3>Key Variables</h3>
+            <ul class="compact-list">
+              <li><code>$cant-col</code> controls the maximum number of generated columns</li>
+              <li><code>$max-width</code> controls when the responsive helpers activate</li>
+              <li><code>$margin-left</code> and related variables control gutters</li>
+              <li><code>$string-name</code> and <code>$string-separator</code> control class naming</li>
+            </ul>
+          </article>
+
+          <article class="reference-card">
+            <h3>Workflow</h3>
+            <div class="snippet-shell">
+              <button class="snippet-copy" type="button" data-copy-button aria-label="Copy customization workflow snippet">Copy</button>
+              <pre class="snippet"><code>npm run build
+open example/index.html</code></pre>
+            </div>
+          </article>
+
+          <article class="reference-card">
+            <h3>Source Files</h3>
+            <ul class="compact-list">
+              <li><code>sass/_gridVars.scss</code> for variables</li>
+              <li><code>sass/grid.scss</code> for grid output</li>
+              <li><code>sass/inputs.scss</code> for input output</li>
+              <li><code>css/*.css</code> for generated distributables</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <p class="footer">
+        This demo now includes six sections, snippet copy actions, and a live breakpoint indicator.
+        Keep iterating here whenever the generated CSS changes.
+      </p>
+    </main>
+
+    <p class="sr-only" aria-live="polite" data-copy-announcer></p>
+    <script src="scripts/examples.js"></script>
   </body>
 </html>
